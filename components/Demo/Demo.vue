@@ -104,7 +104,7 @@ const exampleRaw = computed(() => {
       <template #preview>
         <div>
           <div class="flex justify-center">
-            <div class="example">
+            <div class="example flex-1 max-w-[320px]">
               <Shimmer
                 class="preview"
                 :shimmer-color="compProps.shimmerColor"
@@ -185,7 +185,6 @@ const exampleRaw = computed(() => {
 
 <style scoped>
 .preview {
-  width: 320px;
   aspect-ratio: 2 / 1;
   border-radius: 0.25rem;
 }

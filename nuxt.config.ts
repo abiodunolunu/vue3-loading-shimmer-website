@@ -4,4 +4,12 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss"],
+
+  vite: {
+    vue: {
+      script: {
+        defineModel: true,
+      },
+    },
+  },
 });
