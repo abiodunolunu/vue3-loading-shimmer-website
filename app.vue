@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Title | Lorem Ipsum Stuff",
+  title: "vue3-loading-shimmer | Loading placeholders for your vue apps",
   htmlAttrs: {
     lang: "en",
   },
@@ -18,6 +18,25 @@ useHead({
     {
       rel: "stylesheet",
       href: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap",
+    },
+  ],
+
+  meta: [
+    {
+      name: "keywords",
+      content: "loading, skeleton, shimmer, vue-loading",
+    },
+    {
+      name: "description",
+      content: "vue3-loading-shimmer | Loading placeholders for your vue apps",
+    },
+    {
+      property: "og:title",
+      content: "vue3-loading-shimmer",
+    },
+    {
+      property: "og:description",
+      content: "vue3-loading-shimmer | Loading placeholders for your vue apps",
     },
   ],
 });

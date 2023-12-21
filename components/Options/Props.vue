@@ -1,60 +1,33 @@
 <script setup lang="ts">
 const propsTable = [
   {
-    name: "Lorem",
-    description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
+    name: "bgColor",
+    description: "Background color of the wrapper",
     type: "String",
-    default: "Ipsum",
+    default: "#d3d3d3",
+    required: false,
   },
   {
-    name: "Lorem",
+    name: "shimmerColor",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
-    type: "Number",
-    default: "42",
-  },
-  {
-    name: "Lorem",
-    description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
+      'Color of the shimmer effect (**MUST BE IN HEX-FORMAT**) e.g: "#RRGGBB" or "#RGB"',
     type: "String",
-    default: "Ipsum",
+    default: "#ffffff",
+    required: false,
   },
   {
-    name: "Lorem",
-    description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
+    name: "duration",
+    description: "Duration of the shimmer animation in milliseconds",
     type: "Number",
-    default: "42",
+    default: 1400,
+    required: false,
   },
   {
-    name: "Lorem",
-    description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
-    type: "String",
-    default: "Ipsum",
-  },
-  {
-    name: "Lorem",
-    description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
-    type: "Number",
-    default: "42",
-  },
-  {
-    name: "Lorem",
-    description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
-    type: "String",
-    default: "Ipsum",
-  },
-  {
-    name: "Lorem",
-    description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.",
-    type: "Number",
-    default: "42",
+    name: "direction",
+    description: "Direction of the shimmer effect",
+    type: '"left-to-right", "right-to-left", "top-to-bottom", "bottom-to-top"',
+    default: "left-to-right",
+    required: false,
   },
 ];
 </script>
@@ -72,10 +45,11 @@ const propsTable = [
         <table>
           <thead class="text-left">
             <tr>
-              <th>Name</th>
+              <th>Prop</th>
               <th>Description</th>
               <th>Type</th>
               <th>Default</th>
+              <th>Required</th>
             </tr>
           </thead>
 
@@ -91,6 +65,7 @@ const propsTable = [
               <td>{{ prop.description }}</td>
               <td>{{ prop.type }}</td>
               <td>{{ prop.default }}</td>
+              <td>{{ prop.required }}</td>
             </tr>
           </tbody>
         </table>

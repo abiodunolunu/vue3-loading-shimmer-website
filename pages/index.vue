@@ -1,36 +1,5 @@
 <script setup lang="ts">
 import { PACKAGE_NAME } from "~/CONSTANTS";
-
-useHead({
-  title:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, culpa incidunt reprehenderit repellat vel amet esse, ea repudiandae nihil velit aliquam.",
-  meta: [
-    {
-      name: "keywords",
-      content: "keywords, keywords, keywords",
-    },
-    {
-      name: "description",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, culpa incidunt reprehenderit repellat vel amet esse, ea repudiandae nihil velit aliquam. Possimus saepe velit porro voluptate. Cum, voluptas culpa. Quae.",
-    },
-    {
-      property: "og:title",
-      content: "Lorem ipsum dolor",
-    },
-    {
-      property: "og:description",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, culpa incidunt reprehenderit repellat vel amet esse, ea repudiandae nihil velit aliquam. Possimus saepe velit porro voluptate. Cum, voluptas culpa. Quae.",
-    },
-  ],
-});
-
-definePageMeta({});
-
-useHead({
-  title: "package-name | package-name",
-});
 </script>
 
 <script lang="ts">
@@ -62,17 +31,21 @@ export default {
     };
   },
 });
+
+const features = [
+  "Customizable background color",
+  "Customizable shimmer color",
+  "Customizable time duration",
+  "Customizable direction",
+];
 </script>
 
 <template>
   <div class="">
-    <h1 class="text-3xl font-medium text-center">package-name</h1>
+    <h1 class="text-3xl font-medium text-center">vue3-loading-shimmer</h1>
 
     <div class="mt-8 space-y-8">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
-        ipsam?
-      </p>
+      <p>A customizable Vue 3 component for creating loading shimmer effects</p>
 
       <div class="flex gap-2 justify-center flex-wrap">
         <img
@@ -94,26 +67,27 @@ export default {
       <p
         class="border-l-[3px] border-app-light-grayish-blue pl-4 text-app-night text-opacity-80"
       >
-        package-name is a
+        {{ PACKAGE_NAME }} is a
         <a
           target="_blank"
           href="https://vuejs.org/"
           class="text-app-emerald hover:underline hover:text-opacity-60"
           >Vue 3</a
         >
-        component Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-        doloremque quasi corrupti obcaecati. Dolorum architecto quibusdam
-        commodi sed esse praesentium!
+        component designed to enhance user experience by adding dynamic loading
+        screens and structures to your web app. This lightweight component is
+        perfect for creating visually appealing placeholders while your content
+        is being fetched or processed, creating a seamless and polished feel for
+        your users.
       </p>
     </div>
 
     <div class="mt-8">
       <AnchorHeading text="Features" hash="#Features" />
 
-      <ul class="list-disc">
-        <li v-for="i in 5" :key="i">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum,
-          deleniti.
+      <ul class="list-disc mt-2">
+        <li v-for="feat in features" :key="feat">
+          {{ feat }}
         </li>
       </ul>
     </div>

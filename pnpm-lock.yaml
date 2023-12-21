@@ -20,6 +20,9 @@ dependencies:
   vue3-collapse:
     specifier: ^0.0.19
     version: 0.0.19
+  vue3-loading-shimmer:
+    specifier: 0.0.0-beta.3
+    version: 0.0.0-beta.3
   vue3-star-ratings:
     specifier: ^3.0.5
     version: 3.0.5
@@ -6103,6 +6106,14 @@ packages:
 
   /vue3-collapse@0.0.19:
     resolution: {integrity: sha512-UzPp7TID2mBnJx5PT5fkzgsV4xBVlP0HxSVAWq1bhGRcsMQm2r9+iG1YqMbZCL1HjMN2ydaccMi+k8NkVcSyYQ==}
+    dev: false
+
+  /vue3-loading-shimmer@0.0.0-beta.3:
+    resolution: {integrity: sha512-dv5J7S1sCCk6VOLJ8OOfQsyUSArKWR3Eb0JE0iCXB/qPObj0eURo/j5FyC5NCaNVqfA4v2YQy1ObFPZnPU4fnw==}
+    dependencies:
+      vue: 3.3.12
+    transitivePeerDependencies:
+      - typescript
     dev: false
 
   /vue3-star-ratings@3.0.5:

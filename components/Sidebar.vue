@@ -36,10 +36,6 @@ const routes: Array<{
     name: "Options",
     children: [
       {
-        hash: "#v-model",
-        name: "v-model",
-      },
-      {
         hash: "#props",
         name: "Props",
       },

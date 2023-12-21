@@ -1,28 +1,32 @@
 <script setup lang="ts">
+import { PACKAGE_NAME } from "~/CONSTANTS";
+
 const cdnLinksRaw = `<script src="https://unpkg.com/vue"><\/script>
-<script src='https://unpkg.com/package-name'><\/script>
+<script src='https://unpkg.com/${PACKAGE_NAME}'><\/script>
 `;
 
 const cdnCodeRegRaw = `<script>
 const { createApp } = Vue;
 const App = {
   //Component code...
-  data() {
-    return {
-      value: 3
-    }
-  }
 };
 const app = createApp(App);
-app.component("PackageName", PackageName);
+app.component("${PACKAGE_NAME}", Vue3LoadingShimmer);
 app.mount("#app");
 <\/script>
 `;
 
 const cdnCodeUsageRaw = `<div>
-  <package-name v-model="value" />
+  <${PACKAGE_NAME} class="my-class" />
 </div>
 `;
+
+const cssRaw = `<style>
+.my-class {
+  height: 1rem;
+  width: 100%;
+}
+</style>`;
 </script>
 
 <template>
@@ -47,6 +51,8 @@ const cdnCodeUsageRaw = `<div>
       </p>
 
       <CodeBlock :code-raw="cdnCodeUsageRaw" />
+
+      <CodeBlock :code-raw="cssRaw" />
     </div>
   </div>
 </template>

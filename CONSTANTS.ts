@@ -1,4 +1,4 @@
-const PACKAGE_NAME = "package-name";
-const GITHUB_LINK = "https://github.com/username/package-name";
+const PACKAGE_NAME = "vue3-loading-shimmer";
+const GITHUB_LINK = ref("https://github.com/abiodunolunu/vue3-loading-shimmer");
 
 export { GITHUB_LINK, PACKAGE_NAME };

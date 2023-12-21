@@ -1,13 +1,15 @@
 <script setup lang="ts">
-const npmInstallRaw = `npm install package --save`;
+import { PACKAGE_NAME } from "~/CONSTANTS";
+
+const npmInstallRaw = `npm install ${PACKAGE_NAME} --save`;
 
 const registerGloballyRaw = `import { createApp } from "vue";
 import App from "./App.vue";
-import Package from "package";
+import Shimmer from "${PACKAGE_NAME}";
 
 const app = createApp(App);
 
-app.component("package", Package);
+app.component("${PACKAGE_NAME}", Vue3LoadingShimmer);
 `;
 
 const registerLocallyRaw = `import { defineComponent } from "vue";
@@ -15,16 +17,22 @@ import Package from "package";
 
 export default defineComponent({
   components: {
-    Package,
+    Shimmer,
   },
 });
 
-const value = ref(42)
 `;
 
 const componentUsageRaw = `<template>
-  <package v-model="value" />
+  <${PACKAGE_NAME} class="my-class"/>
 </template>
+
+<style>
+.my-class {
+  height: 1rem;
+  width: 100%;
+}
+</style>
 `;
 </script>
 

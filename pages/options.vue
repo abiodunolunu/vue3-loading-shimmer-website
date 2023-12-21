@@ -2,7 +2,6 @@
 
 <template>
   <div>
-    <OptionsVModel />
     <OptionsProps class="mt-12" />
 
     <PageNav
