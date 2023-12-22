@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const showSidebar = ref(true);
+const showSidebar = ref(!true);
 
 const handleClick = () => {
   if (showSidebar.value) {
